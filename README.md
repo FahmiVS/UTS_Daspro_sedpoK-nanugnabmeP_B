@@ -1,10 +1,11 @@
-# 🔮 Tarot Arcana — Ramalan & Gacha
+# 🔮 ALTAR : Aesthetic Pascal Tarot Card
 
-Program berbasis **Free Pascal** yang menggabungkan simulasi ramalan kartu Tarot, sistem gacha, dan mini-game tebak makna kartu dalam antarmuka terminal berwarna.
-
-Proyek ini dibuat sebagai latihan pemrograman Pascal dengan penggunaan percabangan, perulangan, array, validasi input, angka acak, serta pengelolaan statistik pemain.
-
-> **Catatan:** Program ini dibuat untuk hiburan dan latihan pemrograman. Hasil ramalan bersifat fiktif, bukan prediksi masa depan yang nyata.
+## Kelompok : sedpoK nanugnabmeP
+| No. | Nama | NIM |
+|---|---|---|
+| `1` | Muhammad Abdullah Fahmi | 261401073 |
+| `2` | Arif Rahady Syafiq Siregar | 261401110 |
+| `3` | Muhammad Haikal Faiz Tanjung | 261401123 |
 
 ## ✨ Fitur
 
@@ -20,7 +21,7 @@ Proyek ini dibuat sebagai latihan pemrograman Pascal dengan penggunaan percabang
 - **Validasi input** — memeriksa pilihan menu, nama pemain, metode, dan jawaban agar input tidak valid dapat ditangani.
 - **Konfirmasi keluar** — tampilkan ringkasan permainan sebelum program ditutup.
 
-## 🎮 Cara Bermain
+##  Cara Bermain
 
 ### 1. Mulai sesi pemain
 
@@ -102,36 +103,6 @@ Setiap kartu memiliki interpretasi yang berbeda untuk posisi tegak dan terbalik,
 - **Antarmuka:** Terminal/console
 - **Unit:** `crt` — digunakan untuk warna teks, posisi kursor, animasi, dan jeda.
 
-## ▶️ Menjalankan Program
-
-### Persyaratan
-
-Pastikan Free Pascal Compiler sudah terpasang dan dapat dijalankan melalui terminal.
-
-### Langkah-langkah
-
-1. Clone repository ini atau unduh file sumber `ProjekUTS.pas`.
-2. Buka terminal pada folder tempat file disimpan.
-3. Compile program:
-
-   ```bash
-   fpc ProjekUTS.pas
-   ```
-
-4. Jalankan hasil kompilasi:
-
-   **Windows**
-   ```bash
-   ProjekUTS.exe
-   ```
-
-   **Linux**
-   ```bash
-   ./ProjekUTS
-   ```
-
-> Program menggunakan unit `crt`. Tampilan warna, posisi kursor, dan karakter dekoratif dapat berbeda tergantung terminal dan sistem operasi yang digunakan.
-
 ## 📚 Konsep Pascal yang Digunakan
 
 - Variabel dan konstanta
@@ -145,13 +116,6 @@ Pastikan Free Pascal Compiler sudah terpasang dan dapat dijalankan melalui termi
 - Prosedur terminal dari unit `crt`, seperti `textcolor`, `gotoxy`, `clrscr`, dan `delay`
 - Pengelolaan skor, koin, jatah, statistik, dan koleksi pemain
 
-## 📁 Struktur Repository
-
-```text
-.
-├── ProjekUTS.pas   # Source code utama program Tarot Arcana
-└── README.md       # Dokumentasi repository
-```
 
 ## ⚠️ Batasan
 
@@ -159,10 +123,6 @@ Pastikan Free Pascal Compiler sudah terpasang dan dapat dijalankan melalui termi
 - Program menggunakan antarmuka terminal, bukan aplikasi grafis dengan tombol.
 - Interpretasi kartu merupakan teks hiburan yang telah ditentukan di dalam kode, bukan ramalan yang dapat diverifikasi.
 
-## 👤 Kontribusi
-
-Saran, laporan bug, dan pengembangan fitur sangat dipersilakan melalui Issues atau Pull Requests.
-
 ---
 
-**Tarot Arcana** — *Tarik kartu, kumpulkan XP, dan buktikan gelarmu!* ✨
+**ALTAR : Aesthetic Pascal Tarot Card**
