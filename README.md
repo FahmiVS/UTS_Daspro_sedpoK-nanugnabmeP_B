@@ -1,121 +1,168 @@
-# 🔮 ALTAR : Aesthetic Pascal Tarot Card
+# 🔮 Tarot Arcana — Ramalan & Gacha
 
-**ALTAR** adalah program permainan berbasis teks yang dibuat menggunakan bahasa pemrograman **Pascal**. Program ini menggabungkan simulasi ramalan kartu Tarot dengan mekanisme gacha, sistem perkembangan pemain, serta tampilan terminal yang penuh warna.
+Program berbasis **Free Pascal** yang menggabungkan simulasi ramalan kartu Tarot, sistem gacha, dan mini-game tebak makna kartu dalam antarmuka terminal berwarna.
 
-Proyek ini dibuat untuk menerapkan konsep dasar pemrograman, seperti variabel, percabangan, perulangan, prosedur input-output, validasi masukan, dan penggunaan angka acak dalam sebuah permainan interaktif.
+Proyek ini dibuat sebagai latihan pemrograman Pascal dengan penggunaan percabangan, perulangan, array, validasi input, angka acak, serta pengelolaan statistik pemain.
 
-## ✨ Fitur Utama
+> **Catatan:** Program ini dibuat untuk hiburan dan latihan pemrograman. Hasil ramalan bersifat fiktif, bukan prediksi masa depan yang nyata.
 
--  **Ramalan Satu Kartu** — Pilih satu kartu untuk mendapatkan interpretasi ramalan.
--  **Ramalan Tiga Kartu** — Jelajahi makna masa lalu, masa sekarang, dan masa depan.
--  **Sistem Gacha** — Dapatkan kartu secara acak dengan tiga tingkat kelangkaan.
--  **Sistem Rarity** — Kartu dibagi menjadi Common, Rare, dan Legendary.
--  **Pity System** — Legendary dijamin setelah 10 tarikan tanpa mendapatkan Legendary.
--  **Sistem Koin** — Dapatkan dan gunakan koin untuk melakukan gacha.
--  **Sistem XP dan Rank** — Tingkatkan pengalaman dan pangkat pemain.
--  **Profil Pemain** — Lihat statistik permainan, total ramalan, gacha, dan kartu Legendary.
--  **Tampilan Terminal Berwarna** — Dilengkapi animasi loading, efek visual, dan antarmuka berbasis teks.
--  **Validasi Input** — Memeriksa masukan pengguna untuk mengurangi kesalahan saat bermain.
+## ✨ Fitur
 
-## 🃏 Daftar Kartu Tarot
+- **Intro animasi** — tampilan pembuka dengan efek loading, warna, dan dekorasi terminal.
+- **Mode Eksplorasi** — membaca satu kartu atau tiga kartu (*masa lalu, masa sekarang, dan masa depan*).
+- **Pilihan pengambilan kartu** — memilih kartu sendiri atau mengambil kartu secara acak.
+- **Mode Tantangan** — sistem gacha dan mini-game tebak makna Tarot.
+- **Sistem Gacha** — peluang kartu Common, Rare, dan Legendary dengan hadiah XP dan koin.
+- **Koleksi kartu** — kumpulkan kartu dan lihat progres koleksi di profil pemain.
+- **XP dan koin** — dapatkan XP dari tantangan dan koin dari gacha.
+- **Profil pemain** — menampilkan statistik, koleksi, sisa jatah, dan gelar akhir.
+- **Sistem gelar** — gelar ditentukan berdasarkan total XP setelah Challenge Mode selesai.
+- **Validasi input** — memeriksa pilihan menu, nama pemain, metode, dan jawaban agar input tidak valid dapat ditangani.
+- **Konfirmasi keluar** — tampilkan ringkasan permainan sebelum program ditutup.
 
-ALTAR memiliki 12 kartu yang terbagi ke dalam tiga tingkat kelangkaan.
+## 🎮 Cara Bermain
 
-| No. | Nama Kartu | Rarity |
-|:---:|---|---|
-| 1 | The Fool | Common |
-| 2 | The Magician | Common |
-| 3 | The High Priestess | Common |
-| 4 | The Empress | Common |
-| 5 | The Emperor | Common |
-| 6 | The Hierophant | Common |
-| 7 | The Lovers | Rare |
-| 8 | The Chariot | Rare |
-| 9 | Strength | Rare |
-| 10 | The Hermit | Rare |
-| 11 | Wheel of Fortune | Legendary |
-| 12 | Justice | Legendary |
+### 1. Mulai sesi pemain
 
-Setiap kartu memiliki interpretasi berbeda berdasarkan posisinya, yaitu **Tegak (Upright)** atau **Terbalik (Reversed)**.
+Pilih menu **4. Ganti Nama**, lalu masukkan nama pemain sepanjang 2–20 karakter. Nama hanya boleh berisi huruf dan spasi tunggal.
 
-## Sistem Gacha
+Pemain baru mendapatkan:
+- **100 koin**
+- **6 kesempatan Gacha**
+- **4 kesempatan Tebak Tarot**
 
-Pemain dapat memilih gacha satu kartu atau tiga kartu menggunakan koin.
+### 2. Menu utama
 
-| Rarity | Peluang | Hadiah per Kartu |
-|---|:---:|---:|
-| Common | 60% | +3 koin |
-| Rare | 30% | +8 koin |
-| Legendary | 10% | +25 koin |
+| Pilihan | Fungsi |
+|---|---|
+| `1` | Mode Eksplorasi: ramalan bebas |
+| `2` | Mode Tantangan: Gacha dan Tebak Tarot |
+| `3` | Melihat profil dan statistik pemain |
+| `4` | Memulai sesi baru dengan nama pemain baru |
+| `0` | Keluar dan melihat ringkasan permainan |
 
-**Biaya gacha:**
-- 1 kartu: 10 koin.
-- 3 kartu: 30 koin.
+### 3. Mode Eksplorasi
 
-Setiap kartu yang diperoleh melalui gacha juga memberikan **+5 XP**. Jika pemain tidak memperoleh Legendary selama 10 tarikan, sistem pity menjamin Legendary pada tarikan berikutnya.
+- **Ramalan Satu Kartu** — menampilkan makna satu kartu.
+- **Ramalan Tiga Kartu** — menampilkan kartu untuk masa lalu, masa sekarang, dan masa depan, lalu memberikan kesimpulan berdasarkan jumlah kartu tegak.
+- Kartu bisa dipilih sendiri atau diambil secara acak.
+- Mode ini tidak memberikan XP, koin, atau hadiah tantangan.
 
-*Catatan: Peluang di atas merupakan peluang dasar setiap tarikan. Mekanisme pity memengaruhi peluang ketika jaminan Legendary aktif.*
+### 4. Mode Tantangan
 
-## Sistem Level dan Rank
+**Gacha Tarot**
+- Gacha satu kartu membutuhkan **15 koin**.
+- Gacha tiga kartu membutuhkan **40 koin**.
+- Peluang rarity: **Common 60%**, **Rare 30%**, dan **Legendary 10%**.
+- Setiap rarity memberikan hadiah koin dan XP yang berbeda. Posisi kartu (tegak atau terbalik) juga memengaruhi XP.
+- Kartu yang didapat dapat menambah koleksi pemain.
 
-Kumpulkan XP untuk meningkatkan pangkat dan mencapai posisi tertinggi!
+**Tebak Tarot**
+- Jawab makna kartu berdasarkan empat pilihan jawaban.
+- Setiap jawaban benar memberikan **15 XP**.
+- Satu kesempatan terdiri dari enam pertanyaan.
 
-| Rank | Persyaratan XP |
-|---|---:|
-| Pemula | 0–49 XP |
-| Peramal Muda | 50–149 XP |
-| Peramal Handal | 150–299 XP |
-| Master Tarot | 300–499 XP |
-| Grandmaster Arcana | 500 XP atau lebih |
+Challenge Mode berakhir ketika jatah Tebak Tarot habis dan jatah Gacha habis atau koin tidak lagi cukup untuk melakukan gacha.
 
-Pemain memulai permainan dengan **100 koin**, 0 XP, dan tiga kesempatan bantuan koin. Jika saldo koin kurang dari 10, sistem dapat memberikan bantuan sebesar 20 koin selama kesempatan bantuan masih tersedia.
+### 5. Gelar akhir
 
-Ramalan biasa juga memberikan hadiah koin dan XP pada maksimal 10 sesi ramalan berhadiah.
+Gelar ditentukan berdasarkan total XP saat Challenge Mode selesai.
 
-## Teknologi yang Digunakan
+| Total XP | Gelar |
+|---:|---|
+| 420 ke atas | Sang Gacor Multiverse |
+| 300–419 | CEO Keberuntungan |
+| 200–299 | Dukun Magang Berlisensi |
+| 100–199 | Anak Tarot Masa Percobaan |
+| Di bawah 100 | NPC yang Salah Masuk Portal |
 
-- **Bahasa Pemrograman:** Pascal
-- **Unit:** `crt`
-- **Pengacakan:** `randomize` dan `random`
-- **Antarmuka:** Command-Line Interface (CLI) / terminal
-- **Konsep Pemrograman:** Variabel, konstanta, tipe data, percabangan `if` dan `case`, perulangan `for`, `repeat-until`, validasi input, serta operasi aritmetika.
+## 🃏 Kartu Tarot
 
+Program menyediakan 12 kartu Tarot, masing-masing dengan makna posisi tegak dan terbalik:
 
-## Cara Bermain
+1. The Fool
+2. The Magician
+3. The High Priestess
+4. The Empress
+5. The Emperor
+6. The Hierophant
+7. The Lovers
+8. The Chariot
+9. Strength
+10. The Hermit
+11. Wheel of Fortune
+12. Justice
 
-1. Jalankan program Tarot Arcana.
-2. Masukkan nama pemain dengan panjang 2–20 karakter, menggunakan huruf dan spasi tunggal.
-3. Pilih menu yang tersedia:
-   - `1` — Ramalan Satu Kartu.
-   - `2` — Ramalan Tiga Kartu.
-   - `3` — Gacha Kartu.
-   - `4` — Profil Pemain.
-   - `5` — Ganti Nama.
-   - `0` — Keluar.
-4. Pilih mode ramalan atau jenis gacha yang tersedia.
-5. Baca interpretasi kartu dan kumpulkan hadiah.
-6. Tingkatkan XP hingga mencapai **Grandmaster Arcana**.
+Setiap kartu memiliki interpretasi yang berbeda untuk posisi tegak dan terbalik, sehingga tersedia **24 variasi makna** untuk mode tebak Tarot.
 
+## 🛠️ Teknologi
 
-## Tujuan Proyek
+- **Bahasa:** Pascal
+- **Compiler/runtime:** Free Pascal Compiler (FPC)
+- **Antarmuka:** Terminal/console
+- **Unit:** `crt` — digunakan untuk warna teks, posisi kursor, animasi, dan jeda.
 
-Proyek ini bertujuan untuk mengimplementasikan materi dasar pemrograman Pascal ke dalam sebuah aplikasi permainan sederhana yang interaktif.
+## ▶️ Menjalankan Program
 
-Melalui proyek ini, konsep pemrograman dapat dipelajari melalui implementasi sistem menu, pengolahan data pemain, pengacakan kartu, validasi masukan, perhitungan hadiah, dan perkembangan XP.
+### Persyaratan
 
-## Catatan
+Pastikan Free Pascal Compiler sudah terpasang dan dapat dijalankan melalui terminal.
 
-- Program berjalan melalui terminal, bukan antarmuka grafis.
-- Statistik dan progres pemain disimpan selama program berjalan; kode saat ini belum menyediakan penyimpanan permanen ke file atau database.
-- Ramalan Tarot dalam program ini merupakan bagian dari hiburan dan simulasi permainan, bukan prediksi masa depan yang pasti.
+### Langkah-langkah
 
-## 👥 Kontributor
+1. Clone repository ini atau unduh file sumber `ProjekUTS.pas`.
+2. Buka terminal pada folder tempat file disimpan.
+3. Compile program:
 
-**Nama:** 
-- Muhammad Abdullah Fahmi - 261401073
-- Arif Rahady Syafiq Siregar - 261401110
-- Muhammad Haikal Faiz Tanjung - 261401123
+   ```bash
+   fpc ProjekUTS.pas
+   ```
 
-**Kelompok:** sedpoK nanugnabmeP  
+4. Jalankan hasil kompilasi:
 
-**Mata Kuliah:** Dasar Pemrograman
+   **Windows**
+   ```bash
+   ProjekUTS.exe
+   ```
+
+   **Linux**
+   ```bash
+   ./ProjekUTS
+   ```
+
+> Program menggunakan unit `crt`. Tampilan warna, posisi kursor, dan karakter dekoratif dapat berbeda tergantung terminal dan sistem operasi yang digunakan.
+
+## 📚 Konsep Pascal yang Digunakan
+
+- Variabel dan konstanta
+- Tipe data `string`, `char`, `boolean`, `longint`, dan `byte`
+- Array untuk menyimpan makna serta pilihan jawaban
+- Percabangan `if`, `case`
+- Perulangan `for`, `repeat-until`, dan `while`-style flow melalui pengulangan
+- Validasi input dengan `val`
+- Bilangan acak menggunakan `randomize` dan `random`
+- Manipulasi string menggunakan `copy`, `length`, dan `pos`
+- Prosedur terminal dari unit `crt`, seperti `textcolor`, `gotoxy`, `clrscr`, dan `delay`
+- Pengelolaan skor, koin, jatah, statistik, dan koleksi pemain
+
+## 📁 Struktur Repository
+
+```text
+.
+├── ProjekUTS.pas   # Source code utama program Tarot Arcana
+└── README.md       # Dokumentasi repository
+```
+
+## ⚠️ Batasan
+
+- Data pemain hanya disimpan selama program berjalan; belum menggunakan file atau database untuk penyimpanan permanen.
+- Program menggunakan antarmuka terminal, bukan aplikasi grafis dengan tombol.
+- Interpretasi kartu merupakan teks hiburan yang telah ditentukan di dalam kode, bukan ramalan yang dapat diverifikasi.
+
+## 👤 Kontribusi
+
+Saran, laporan bug, dan pengembangan fitur sangat dipersilakan melalui Issues atau Pull Requests.
+
+---
+
+**Tarot Arcana** — *Tarik kartu, kumpulkan XP, dan buktikan gelarmu!* ✨
